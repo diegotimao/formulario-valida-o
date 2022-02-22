@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>D - Viagems</title>
+  </head>
+  <body>
+    <header>
+        <div class="title-header">
+            <h1>Concorra a sua viagem dos <strong>sonhos</strong></h1>
+        </div>
+    </header>
+    <main>
+      
+      <form action="" onsubmit="validForme()">
+        <div class="alert" id="notification">
+            <h2 id="title">Error no campo email</h2>
+            <strong id="descripition"></strong>
+        </div>
+        <div class="info space-marge">
+          <h1>Seus dados</h1>
+        </div>
+        <div class="section1">
+          <label for="">Nome completo</label>
+          <input
+            type="text"
+            name="name-user"
+            id="name-user"
+            min="10"
+            max="40"
+          />
+          <label for="">E-mail</label>
+          <input type="email" name="email" id="email" min="10" max="50" />
+        </div>
+
+        <div class="options">
+          <h3>Escolha uma das opções</h3>
+          <div class="options-input">
+            <input type="radio" name="isTripe" id="trip-1" />
+            <label for="trip-1">Cidade</label>
+
+            <input type="radio" name="isTripe" id="trip-2" />
+            <label for="trip-2">Campo</label>
+
+            <input type="radio" name="isTripe" id="trip-3" />
+            <label for="trip-3">Praia</label>
+
+            <input type="radio" name="isTripe" id="trip-4" />
+            <label for="trip-4">Montanhas</label>
+          </div>
+        </div>
+        <div class="text">
+          <label for="">Descreva por que você deve ganhar o TrybeTrip?</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="6"
+          ></textarea>
+        </div>
+        <div class="date-viagens">
+          <div class="info-date">
+            <h2>Interesse na data</h2>
+            <span>+ Adicionar nova data</span>
+          </div>
+          <div class="date">
+            <div class="day">
+              <label>Dia</label>
+              <input
+                type="number"
+                name="day"
+                id="day"
+                min="1"
+                max="31"
+                value="01"
+              />
+            </div>
+            <div class="month">
+              <label for="">Mês</label>
+              <div class="select-month">
+                <input type="text" name="month" id="month-input" onFocus="dropdawn(0)" onBlur="dropdawn(1)" placeholder="Selecione o mês"/>
+
+                <div class="dropDown">
+                  <div class="listDropDown">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ano">
+              <label for="">Ano</label>
+              <input
+                type="number"
+                name="year"
+                id="year"
+                min="2022"
+                max="31"
+                value="2022"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <div class="btn-buttons">
+            <button class="btn-cancel">Cancelar</button>
+            <button class="btn-submit" type="submit" id="btn-submit">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
